@@ -1,13 +1,17 @@
 import React from 'react'
+import { useState } from 'react'
 
 const Navbar = () => {
+  const [ShowNav, SetShowNav] = useState(false)
+
   return (
-    <nav className="bg-gray-900 text-white px-4 py-4 flex justify-around">
+    <nav className="bg-gray-900 text-white flex justify-between items-center sticky top-0 z-20 px-10">
       <div class="p-2">
         <p class="font-bold">Tanapoowapat</p>
       </div>
       <button
-        class="inline-flex p-2 rounded-lg bg-gray-600  md:hidden"
+        onClick={() => SetShowNav(!ShowNav)}
+        class="inline-flex p-2 rounded-lg bg-gray-600  md:hidden "
         aria-controls="mobile-menu"
         aria-expanded="false"
         type="button"
@@ -29,28 +33,17 @@ const Navbar = () => {
         </svg>
       </button>
 
-      <div class="hidden">
-        <ul>
-          <li>
-            <Item url="#" context="Work" />
-          </li>
-          <li>
-            <Item url="#" context="Work" />
-          </li>
-          <li>
-            <Item url="#" context="Work" />
-          </li>
-          <li>
-            <Item url="#" context="Work" />
-          </li>
+      <div class="gap-2 p-2">
+        <ul
+          class={
+            (ShowNav ? 'left-0' : '-left-full') +
+            ' left-46 bg-gray-700 space-y-5 p-2 items-center fixed bottom-0 top-12 md:space-y-0 md:space-x-7 md:bg-gray-900 md:static md:flex md:gap-16'
+          }
+        >
+          <Item url="#" context="Work" />
+          <Item url="#" context="Educate" />
+          <Item url="#" context="Source" />
         </ul>
-      </div>
-
-      <div class="gap-2 p-2 hidden md:flex md:gap-16">
-        <Item url="#" context="Work" />
-        <Item url="#" context="Educate" />
-        <Item url="#" context="Uses" />
-        <Item url="#" context="Source" />
       </div>
 
       <div class="p-2">
@@ -58,17 +51,17 @@ const Navbar = () => {
           Theam
         </button>
       </div>
-
-      <div class="text-sm p-2 md:hidden">test</div>
     </nav>
   )
 }
 
 const Item = props => {
   return (
-    <a href={props.url}>
-      <p>{props.context}</p>
-    </a>
+    <li>
+      <a href={props.url}>
+        <p>{props.context}</p>
+      </a>
+    </li>
   )
 }
 

@@ -1,16 +1,13 @@
 import React from 'react'
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
+import Main_Content from '../component/Main_Content'
 
 const Main = () => {
   return (
     <div>
       <Navbar />
-      Content
-      <i class="fi fi-rr-user"></i>
-      <i class="fi fi-br-arrow-right"></i>
-      <i class="fi fi-sr-book"></i>
-      <i class="fi fi-rr-broom"></i>
+      <Main_Content />
       <Footer />
     </div>
   )
