@@ -11,7 +11,7 @@ const Navbar = () => {
       </div>
       <button
         onClick={() => SetShowNav(!ShowNav)}
-        class="inline-flex p-2 rounded-lg bg-gray-600  md:hidden "
+        class="order-2 inline-flex p-2 rounded-lg bg-gray-600  md:hidden "
         aria-controls="mobile-menu"
         aria-expanded="false"
         type="button"
@@ -36,8 +36,8 @@ const Navbar = () => {
       <div class="gap-2 p-2">
         <ul
           class={
-            (ShowNav ? 'left-0' : '-left-full') +
-            ' left-46 bg-gray-700 space-y-5 p-2 items-center fixed bottom-0 top-12 md:space-y-0 md:space-x-7 md:bg-gray-900 md:static md:flex md:gap-16'
+            (ShowNav ? 'right-1' : '-right-full') +
+            ' left-46 bg-gray-700 space-y-2 p-5 opacity-95 items-center fixed top-10 md:space-y-0 md:space-x-7 md:bg-gray-900 md:static md:flex md:gap-16'
           }
         >
           <Item url="#" context="Work" />
