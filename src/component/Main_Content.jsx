@@ -2,8 +2,12 @@ import React from 'react'
 
 const Main_Content = () => {
   return (
-    <div className=" bg-black text-white p-4 mx-auto">
-      <span class="flex justify-center bg-red-600"> Main Content Here</span>
+    <div className="container bg-black text-white mt-2 mb-3">
+      <div class="bg-gray-800 p-2 rounded-md flex justify-center">
+        <div className="bg-gray-500 p-2 rounded-lg  ">
+          <span>Hi I'm Tanapoowapat Yomsarn from Thailand.</span>
+        </div>
+      </div>
     </div>
   )
 }

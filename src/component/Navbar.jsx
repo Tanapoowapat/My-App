@@ -5,13 +5,13 @@ const Navbar = () => {
   const [ShowNav, SetShowNav] = useState(false)
 
   return (
-    <nav className="bg-gray-900 text-white flex justify-between items-center sticky top-0 z-20 px-10">
+    <nav className="bg-gray-900 text-white flex justify-around items-center sticky top-0 z-20 px-10">
       <div class="p-2">
         <p class="font-bold">Tanapoowapat</p>
       </div>
       <button
         onClick={() => SetShowNav(!ShowNav)}
-        class="order-2 inline-flex p-2 rounded-lg bg-gray-600  md:hidden "
+        class="order-2 inline-flex p-2 mt-2 rounded-lg bg-gray-600 md:hidden "
         aria-controls="mobile-menu"
         aria-expanded="false"
         type="button"
